@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         LSS EinsatzID in Mögliche Einsätze
 // @namespace    www.leitstellenspiel.de
-// @version      1.0
+// @version      1.1
 // @description  Fügt die Einsatz-IDs zu jedem Einsatz in der Liste "Mögliche Einsätze" ein.
 // @author       MissSobol
 // @match        https://www.leitstellenspiel.de/einsaetze
@@ -25,9 +25,6 @@
 
         // Entferne "?overlay_index=0" aus dem href, falls vorhanden
         href = href.replace('?overlay_index=0', '');
-
-        // Setze den aktualisierten href zurück
-        einsatzLink.setAttribute('href', href);
 
         var einsatzID = href.split('/').pop();
 
